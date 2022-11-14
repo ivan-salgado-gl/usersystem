@@ -1,0 +1,26 @@
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+  datasource:
+    url: jdbc:h2:mem:mydb
+    username: sa
+    password:
+    driverClassName: org.h2.Driver
+  jpa:
+    spring:
+      jpa:
+        database-platform: org.hibernate.dialect.H2Dialect
+      hibernate:
+        ddl-auto: update
+      properties:
+        hibernate:
+          show_sql: true
+  h2:
+    console.enabled: true
+com:
+  bci:
+    project:
+      expiration.time: 60
+      subject: BCI
+      secret: Y2xhdmUtc2VjcmV0YS1wYXJhLWVsLWp3dC0xMjM0NTY3ODkwJCQk

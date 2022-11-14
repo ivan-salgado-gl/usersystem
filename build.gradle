@@ -1,0 +1,52 @@
+plugins {
+	id 'org.springframework.boot' version '2.7.5'
+	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+	id 'groovy'
+}
+
+group = 'com.bci.project.exercise'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.mapstruct:mapstruct:1.5.3.Final'
+	implementation 'io.springfox:springfox-swagger2:2.9.2'
+	implementation 'io.springfox:springfox-swagger-ui:2.9.2'
+	implementation 'io.jsonwebtoken:jjwt-api:0.11.5'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+	compileOnly 'org.projectlombok:lombok:1.18.24'
+	runtimeOnly 'com.h2database:h2'
+	runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.11.5'
+	runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.11.5'
+	annotationProcessor 'org.projectlombok:lombok'
+	annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.3.Final'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	// mandatory dependencies for using Spock
+	implementation 'org.codehaus.groovy:groovy:3.0.10'
+	testImplementation platform("org.spockframework:spock-bom:2.1-groovy-3.0")
+	testImplementation "org.spockframework:spock-core"
+}
+
+tasks.named('test') {
+	//useJUnitPlatform()
+	// Enable JUnit 5 (Gradle 4.6+).
+	useJUnitPlatform()
+
+	// Show test results.
+	testLogging {
+		events "passed", "skipped", "failed"
+	}
+}
