@@ -23,4 +23,22 @@ Realizar los siguientes pasa para descargar, compilar y ejecutar el proyecto:
 
 ----
 
+### Swagger
+
+Recursos disponibles.
+
+![](https://i.ibb.co/NF77CxG/swagger-ibc.png)
+
+> http://localhost:8080/swagger-ui.html
+
+### H2-Console
+
+Base de datos en memoria.
+
+![](https://i.ibb.co/5WWW52x/h2-ibc.png)
+
+> http://localhost:8080/h2-console/login.jsp
+
+----
+
 #### Ivan Salgado
