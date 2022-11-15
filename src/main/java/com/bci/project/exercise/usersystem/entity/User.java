@@ -37,7 +37,7 @@ public class User extends AuditableEntity implements Serializable {
     @Column(name = "email", nullable = false, unique = true, length = 256)
     private String email;
 
-    @Column(name = "password", nullable = false, length = 64)
+    @Column(name = "password", nullable = false, length = 256)
     private String password;
 
     @Column(name = "last_login")

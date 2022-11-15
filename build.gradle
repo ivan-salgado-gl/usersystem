@@ -33,6 +33,7 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.3.Final'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'de.svenkubiak:jBCrypt:0.4.3'
 
 	// mandatory dependencies for using Spock
 	implementation 'org.codehaus.groovy:groovy:3.0.10'
